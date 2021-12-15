@@ -1,0 +1,27 @@
+<templateSet group="aes_intents">
+  <template name="aes_intents_Start_Activity_explicitly" value="//Calls another activity, by name, without passing data&#10;Intent iExp = new Intent(this, ActivityToCall.class); &#10;//TODO Replace 'ActivityToCall' with the class name of the activity being called&#10;startActivity(iExp);&#10;" description="Starts Activity by calling the class (not using id)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_intents_Start_Activity_implicitly" value="//Calls another activity, by action and category, without passing data&#10;//refer to AndroidManifest.xml&lt;intent-filter&gt; when determining the action and category of the activity to call&#10;Intent iImp = new Intent(&quot;actionName&quot;); &#10;//TODO Replace 'actionName' as appropriate for your action (for example, Intent.ACTION_EDIT)&#10;iImp.addCategory(&quot;categoryName&quot;); &#10;//TODO Replace 'categoryName' as appropriate for your category (for example, Intent.CATEGORY_DEFAULT)&#10;startActivity(iImp);" description="Starts Activity by using the id, action and category" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_intents_Start_Activity_for_result" value="//Calls another activity, identified by action and category, passing data URL and a MIME type&#10;//The class calling the snippet code must implement the following method:&#10;//protected void onActivityResult (int requestCode, int resultCode, Intent data) {}&#10;Intent iImp = new Intent();&#10;iImp.setAction(&quot;actionName&quot;); &#10;//TODO Replace 'actionName' as appropriate for your action (for example, Intent.ACTION_EDIT)&#10;iImp.addCategory(&quot;categoryName&quot;); &#10;//TODO Replace 'categoryName' as appropriate for your category (for example, Intent.CATEGORY_DEFAULT)&#10;//optional - set data and MIME type for the intent&#10;iImp.setDataAndType(Uri.parse(&quot;http://com.example.project/folder&quot;), &quot;text/plain&quot;);&#10;//TODO Change URL and MIME type as appropriate&#10;startActivityForResult(iImp, 0); &#10;//TODO The second parameter (here, zero) is the request code to be used in onActivityResult(); change this parameter to an appropriate value for your activity" description="Starts Activity and waits for a result" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_intents_Send_Broadcast" value="//Broadcasts an event notification&#10;//before sending broadcast, make sure that your application has permission to broadcast the action. &#10;//Otherwise, a SecurityException: Permission denial will be thrown&#10;Intent iBroad = new Intent();&#10;iBroad.setAction(&quot;actionName&quot;); &#10;//TODO Replace 'actionName' as appropriate for your action (for example, Intent.ACTION_EDIT)&#10;iBroad.addCategory(&quot;categoryName&quot;); &#10;//TODO Replace 'categoryName' as appropriate for your category (for example, Intent.CATEGORY_DEFAULT)&#10;this.sendBroadcast(iBroad);&#10;" description="Sends message for broadcast receivers" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_intents_Start_Service" value="//Starts a service (task to be accomplished in the background, without UI)&#10;//The class employing the snippet code must implement ServiceConnection&#10;Intent iServ = new Intent();&#10;iServ.setClass(getBaseContext(), ServiceName.class); &#10;//TODO Replace 'ServiceName' with the class name for your Service&#10;bindService(iServ, this, BIND_AUTO_CREATE);&#10;startService(iServ);" description="Binds and starts service" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

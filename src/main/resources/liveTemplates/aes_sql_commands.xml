@@ -1,0 +1,47 @@
+<templateSet group="aes_sql_commands">
+  <template name="aes_sql_command_Create_table" value="CREATE TABLE songs( id INTEGER, name TEXT, genre TEXT, rate REAL, some_raw_data BLOB);&#10;" description="Creates a table to store songs" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Create_a_table_with_data_from_another_table" value="SELECT * INTO rockssongs FROM songs WHERE genre ='rock';" description="Creates a table composed of rock songs from the &quot;songs&quot; table" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Count_example" value="SELECT COUNT(DISTINCT student_city) AS total FROM students;" description="How many different cities do our students come from?" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Delete_rows" value="DELETE FROM songs WHERE rating&lt; 5;&#10;" description="Deletes from a table all songs that have a rating less than 5" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Delete_a_table" value="DROP TABLE &quot;bad_songs&quot;;&#10;" description="Deletes a named table" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Left_join_example" value="SELECT students.name FROM students LEFT JOIN math_class ON students.id = math_class.student_id WHERE math_class.grade &gt; 5;" description="SQL query for selecting all students from a table students that has grade bigger than 5 in the table math_class" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Inner_join_example" value="SELECT DISTINCT students.id, students.name FROM students INNER JOIN math_class ON students.id = math_class.student_id;&#10;" description="SQL query for selecting all students from a table students that are also present in the table math_class" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Insert_example" value="INSERT INTO albums(ambum_id, artist_name, album_name) VALUES('12345', 'David Bowie','Ziggy Stardust');&#10;" description="Insert a David Bowie album into a database table" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sql_command_Update_a_table" value="UPDATE songs SET already_listened =&quot;yes&quot; WHERE genre = &quot;rock&quot;;" description="SQL query for updating a table" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

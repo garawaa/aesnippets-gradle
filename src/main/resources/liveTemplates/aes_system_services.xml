@@ -1,0 +1,92 @@
+<templateSet group="aes_system_services">
+  <template name="aes_system_Activity_Manager" value="// To use this ActivityManager method, AndroidManifest.xml must have the following permission:&#10;//&lt;uses-permission android:name=&quot;android.permission.GET_TASKS&quot;/&gt;&#10;ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);&#10;" description="Obtain a handle to the manager responsible for interacting with running activities" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Alarm_Manager" value="AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);" description="Obtain a handle to the manager responsible for providing access to the system alarm services" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Audio_Manager" value="AudioManager audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);&#10;" description="Obtain a handle to the manager responsible for handling volume, ringer modes, audio routing and so on" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Clipboard_Manager" value="ClipboardManager clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);&#10;" description="Obtain a handle to the manager responsible for accessing and modifying the contents of the global clipboard" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Connectivity_Manager" value="// To use this ConectivityManager method, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;&#10;ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);" description="- Obtain a handle to the manager responsible for answering queries about the state of network connectivity" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Input_Method_Manager" value="InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);&#10;" description="Obtain a handle to the manager responsible for handling input methods" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Keyguard_Manager" value="KeyguardManager keyguardManager = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);&#10;" description="- Obtain a handle to the manager responsible for locking and unlocking the keyboard" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Layout_Inflater Manager" value="LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);&#10;" description="Obtain a handle to the manager responsible for instantiating layout XML files into their corresponding View objects" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Location_Manager" value="LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);&#10;" description="Obtain a handle to the manager responsible for providing access to the system location services (geographical location)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Notification_Manager" value="NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);&#10;&#10;" description="Obtain a handle to the manager responsible for informing the user about events that happen in the background" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Power_Manager" value="// To use this PowerManager method, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.DEVICE_POWER&quot;/&gt;&#10;PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);&#10;" description="Obtain a handle to the manager responsible for controlling power management, including &quot;wake locks&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Search_Manager" value="SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);&#10;&#10;" description="Obtain a handle to the manager responsible for providing access to the system search services" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Sensor_Manager" value="SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);&#10;" description="Obtain a handle to the manager responsible for accessing sensors, such as those that provide information about device orientation and inclination" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Telephony_Manager" value="// To use this TelephonyManager method, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot;/&gt;&#10;TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);&#10;" description="Obtain a handle to the manager responsible for accessing information about the telephony services on the device" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Vibrator" value="// To use this Vibrator method, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot;/&gt;&#10;Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);&#10;" description="- Obtain a handle to the manager responsible for interacting with the vibration hardware" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Wallpaper" value="// To use this WallpaperService method, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.SET_WALLPAPER&quot;/&gt;&#10;WallpaperService wallpaperService = (WallpaperService) getSystemService(Context.WALLPAPER_SERVICE);&#10;" description="Obtain a handle to the manager responsible for accessing wallpapers" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Wi-Fi_Manager" value="// To use this WifiManager method, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot;/&gt;&#10;WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);&#10;" description="Obtain a handle to the manager responsible for managing all aspects of Wi-Fi connectivity" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_system_Window_Manager" value="WindowManager windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);" description="Obtain a handle to the manager responsible for granting apps access to the system window manager" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

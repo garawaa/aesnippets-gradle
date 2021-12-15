@@ -1,0 +1,27 @@
+<templateSet group="aes_localization">
+  <template name="aes_locale_Get_localized_string" value="String text = getResources().getString(R.string.yourStringID);&#10;" description="Get a localized string resource" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_locale_Get_localized_drawable" value="Drawable drawable = getResources().getDrawable(R.drawable.yourDrawableID);&#10;" description="Get a localized drawable resource" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_locale_Get_current_locale" value="Locale curLocale = java.util.Locale.getDefault();&#10;" description="Get the current locale from Java" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_locale_Get_resource_locale" value="Locale resLocale = getResources().getConfiguration().locale;&#10;" description="Get the current locale for your application's package" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_locale_Create_formatted_message" value="// yourMsgID =&quot;The language is {0}&quot;&#10;String msg = getResources().getString(R.string.yourMsgID);&#10;Object[] arguments = {&#10; java.util.Locale.getDefault().getDisplayLanguage()&#10;};&#10;String fullMsg = java.text.MessageFormat.format(msg, arguments);&#10;" description="Create a formatted message containing the full language name in the default locale" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

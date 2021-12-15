@@ -1,0 +1,17 @@
+<templateSet group="aes_resources_and_assets">
+  <template name="aes_asset_List_your_application_assets" value="String fileArray[] = this.getAssets().list(&quot;&quot;);&#10;" description="Create a list of assets within your application's package" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_asset_Open_an_asset_as_a_byte_stream" value="InputStream is = this.getAssets().open(fileName);&#10;" description="Retrieve an Inputstream for a named asset" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_asset_Open_an_asset_for_parsing_as_XML" value="XmlResourceParser xmlParser = this.getAssets().openXmlResourceParser(fileName);&#10;" description="Retrieve an XmlResourceParser for a compiled XML file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

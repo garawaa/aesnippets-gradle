@@ -1,0 +1,22 @@
+<templateSet group="aes_log">
+  <template name="aes_log_ERROR_message" value="Log.e(&quot;YourIdentifier&quot;,&quot;This is an error message&quot;);&#10;" description="Log an ERROR message" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_log_WARNING_message" value="Log.w(&quot;YourIdentifier&quot;,&quot;This is a warning message&quot;);&#10;" description="Log a WARNING message" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_log_INFO_message" value="Log.i(&quot;YourIdentifier&quot;,&quot;This is an information message&quot;);&#10;" description="Log an INFO message" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_log_DEBUG_message" value="Log.d(&quot;YourIdentifier&quot;,&quot;This is a debug message&quot;);&#10;" description="Log a DEBUG message" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,42 @@
+<templateSet group="aes_sqlite_functions">
+  <template name="aes_sqlite_Database_Create_or_Open" value="SQLiteDatabase db =openOrCreateDatabase(&quot;MyDatabaseName&quot;, MODE_PRIVATE, null);&#10;" description="Open or create a new SQLite database" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Database_Delete" value="boolean success = deleteDatabase(&quot;MyDatabaseName&quot;);&#10;" description="Delete a SQLite database" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Table_Create" value="db.execSQL(&quot;CREATE TABLE MyTableName (_id INTEGER PRIMARY KEY AUTOINCREMENT,YourColumnName TEXT);&quot;);&#10;" description="Create a new table within a database" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Table_delete" value="db.execSQL(&quot;DROP TABLE IF EXISTS MyTableName&quot;);&#10;" description="Delete a table from a database" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Entry_Insert" value="// Since SQL doesn't allow the insertion of a completely empty row, the second parameter of db.insert defines the column that will receive NULL if cv is empty&#10;ContentValues cv=new ContentValues();&#10;cv.put(&quot;YourColumnName&quot;, &quot;YourColumnValue&quot;);&#10;db.insert(&quot;MyTableName&quot;, &quot;YourColumnName&quot;, cv);&#10;" description="Insert a table row" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Entry_Update" value="ContentValues cv=new ContentValues();&#10;cv.put(&quot;YourColumnName&quot;, &quot;YourColumnValue&quot;);&#10;db.update(&quot;MyTableName&quot;, cv, &quot;_id=?&quot;, new String[]{&quot;1&quot;});&#10;" description="Update a table row" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Entry_Delete" value="db.delete(&quot;MyTableName&quot;,&quot;_id=?&quot;, new String[]{&quot;1&quot;});&#10;" description="Delete a table row" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sqlite_Run_SQI_Query" value="Cursor c=db.rawQuery(SQL_COMMAND, null);&#10;" description="Execute a SQL query" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

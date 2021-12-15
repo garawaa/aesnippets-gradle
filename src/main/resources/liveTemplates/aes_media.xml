@@ -1,0 +1,22 @@
+<templateSet group="aes_media">
+  <template name="aes_media_Play_audio_or_video_from_a_file_within_the_app" value="// Put the media file into the res/raw folder of your application&#10;MediaPlayer mp = MediaPlayer.create(this, R.raw.yourSoundId);&#10;mp.start();&#10;" description="Play a media file that is located in a folder inside the application" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_media_Play_audio_or_video_given_a_path_to_a_file_or_a_URL" value="MediaPlayer mp = new MediaPlayer();&#10;mp.setDataSource(FILE_PATH_OR_URL);&#10;mp.prepare();&#10;mp.start();&#10;" description="Play a media file that is located in the local file system or on the Internet" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_media_Start_recording_audio" value="// To use these MediaRecorder methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.RECORD_AUDIO&quot;/&gt;&#10;MediaRecorder recorder = new MediaRecorder();&#10;recorder.setAudioSource(MediaRecorder.AudioSource.MIC);&#10;recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);&#10;recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);&#10;recorder.setOutputFile(PATH_NAME); // The file must already exist&#10;recorder.prepare();&#10;recorder.start();&#10;" description="Record audio and save to a file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_media_Stop_recording_audio" value="recorder.stop();&#10;recorder.release();&#10;" description="Stop the audio recording" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

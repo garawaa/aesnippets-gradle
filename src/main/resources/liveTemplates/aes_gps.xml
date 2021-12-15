@@ -1,0 +1,27 @@
+<templateSet group="aes_gps">
+  <template name="aes_gps_Get_current_GPS_coordinates" value="// To use these LocationManager methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;&#10;LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);&#10;locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new LocationListener() {&#10;public void onStatusChanged(String provider, int status, Bundle extras) {&#10;// called when the location provider status changes. Possible&#10;status: OUT_OF_SERVICE, TEMPORARILY_UNAVAILABLE or AVAILABLE.&#10;}&#10;public void onProviderEnabled(String provider) {&#10;// called when the location provider is enabled by the user&#10;}&#10;public void onProviderDisabled(String provider) {&#10;// called when the location provider is disabled by the user. If it is already disabled, it's called immediately after requestLocationUpdates&#10;}&#10;public void onLocationChanged(Location location) {&#10;double latitute = location.getLatitude();&#10;double longitude = location.getLongitude();&#10;// do whatever you want with the coordinates&#10;}&#10;});&#10;&#10;" description="Get the current location of the device" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_gps_Get_last_known_GPS_coordinates" value="// To use these LocationManager methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;&#10;LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);&#10;Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);&#10;double latitute, longitude = 0;&#10;if(location != null){&#10;latitute = location.getLatitude();&#10;longitude = location.getLongitude();&#10;}&#10;" description="Get the last known location of the device" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_gps_Distance_between_GPS_coordinates" value="Location originLocation = new Location(&quot;gps&quot;);&#10;Location destinationLocation = new Location(&quot;gps&quot;);&#10;originLocation.setLatitude(originLatitude);&#10;originLocation.setLongitude(originLongitude);&#10;destinationLocation.setLatitude(originLatitude);&#10;destinationLocation.setLongitude(originLongitude);&#10;float distance = originLocation.distanceTo(destinationLocation);&#10;" description="Calculate the distance between two locations" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_gps_Register_for_GPS_status_changes" value="// To use these LocationManager methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;&#10;LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);&#10;locationManager.addGpsStatusListener(new GpsStatus.Listener(){&#10;public void onGpsStatusChanged(int event) {&#10;switch(event){&#10;// Event sent when the GPS system has started&#10;case GpsStatus.GPS_EVENT_STARTED:&#10;// put your code here&#10;break;&#10;// Event sent when the GPS system has stopped&#10;case GpsStatus.GPS_EVENT_STOPPED:&#10;// put your code here&#10;break;&#10;// Event sent when the GPS system has received its first fix since starting case GpsStatus.GPS_EVENT_FIRST_FIX:&#10;// put your code here&#10;break;&#10;// Event sent periodically to report GPS satellite status&#10;case GpsStatus.GPS_EVENT_SATELLITE_STATUS:&#10;// put your code here&#10;break;&#10;&#10;}&#10;}&#10;});&#10;" description="Register a listener for changes in GPS status" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_gps_Register_for_a_proximity_alert" value="// To use these LocationManager methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;&#10;// Use PendingIntent.getActivity(Context, int, Intent, int),&#10;// PendingIntent.getBroadcast(Context, int, Intent, int) or&#10;// PendingIntent.getService(Context, int, Intent, int) to create the PendingIntent,&#10;// which will be used to generate an Intent to fire when the proximity condition is&#10;// satisfied.&#10;// PendingIntent pendingIntent;&#10;// latitude the latitude of the central point of the alert region&#10;// longitude the longitude of the central point of the alert region&#10;// radius the radius of the alert region, in meters&#10;LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);&#10;locationManager.addProximityAlert(latitude, longitude, radius, -1, pendingIntent);&#10;" description="Register a listener to be notified when the device is near a given point" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

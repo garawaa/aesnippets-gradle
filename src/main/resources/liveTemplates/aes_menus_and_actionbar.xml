@@ -1,0 +1,47 @@
+<templateSet group="aes_menus_and_actionbar">
+  <template name="aes_menu_Options_menu" value="/*&#10;* Add this in your Activity&#10;*/&#10;private final int MENU_ITEM_0 = 0;&#10;private final int MENU_ITEM_1 = 1;&#10;/**&#10;* Add menu items&#10;*&#10;* @see android.app.Activity onCreateOptionsMenu(android.view.Menu)&#10;*/&#10;public boolean onCreateOptionsMenu(Menu menu) {&#10; menu.add(0, MENU_ITEM_0, 0, &quot;Menu Item 0&quot;);&#10; menu.add(0, MENU_ITEM_1, 0, &quot;Menu Item 1&quot;);&#10; return true;&#10;}&#10;/**&#10;* Define menu action&#10;*&#10;* @see android.app.Activity onOptionsItemSelected(android.view.MenuItem)&#10;*/&#10;public boolean onOptionsItemSelected(MenuItem item) {&#10; switch (item.getItemId()) {&#10; case MENU_ITEM_0:&#10; // put your code here&#10; break;&#10; case MENU_ITEM_1:&#10; // put your code here&#10; break;&#10; default:&#10;// put your code here&#10; }&#10; return false;&#10;}&#10;" description="Example of how to add items to an options menu and handle menu item selection. Add this to your activity." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Disable_a_menu_item" value="menu.findItem(&quot;yourItemId&quot;).setEnabled(false);&#10;" description="Disable a menu item, making it unusable" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Add_a_sub-menu" value="SubMenu subMenu = menu.addSubMenu(&quot;YourMenu&quot;);&#10;subMenu.add(&quot;YourSubMenu1&quot;);&#10;" description="Add a sub-menu to a menu item" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_XML_menu_definition" value="&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;&#10; &lt;item android:id=&quot;@+id/menu_0&quot;&#10; android:title=&quot;Menu Item 0&quot; /&gt;&#10; &lt;item android:id=&quot;@+id/menu_1&quot;&#10; android:title=&quot;Menu Item 1&quot; /&gt;&#10;&lt;/menu&gt;&#10;" description="A menu definition, in XML. Save this in res/menu/ and name it &lt;nameYouWantToReferToThisMenu&gt;.xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Inflate_menu_from_XML" value="/**&#10;* Inflate Menu from XML&#10;*/&#10;public boolean onCreateOptionsMenu(Menu menu) {&#10; super.onCreateOptionsMenu(menu);&#10; MenuInflater inflater = getMenuInflater();&#10; inflater.inflate(R.menu.yourXMLName, menu);&#10; return true;&#10;}&#10;" description="Inflate an XML menu definition for use in an activity." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Show_action_bar" value="//Notes:&#10;// - The Action Bar was introduced in API level 11.&#10;// If you set minSDKVersion &lt; 11 or targetSDKVersion &lt; 11 or&#10;// if you do not set any of these, getActionBar() will return null.&#10;// - If you removed the Action Bar using a theme,&#10;// getActionBar() will return null.&#10;if (getActionBar() != null){&#10;getActionBar().show();&#10;}&#10;&#10;" description="Programmatically show the action bar" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Hide_action_bar" value="//Notes:&#10;// - The Action Bar was introduced in API level 11.&#10;// If you set minSDKVersion &lt; 11 or targetSDKVersion &lt; 11 or&#10;// if you do not set any of these, getActionBar() will return null.&#10;// - If you removed the Action Bar using a theme,&#10;// getActionBar() will return null.&#10;if (getActionBar() != null){&#10;getActionBar().hide();&#10;}&#10;" description="Programmatically hide the action bar" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Toggle_action_bar_visibility" value="//Toggles action bar state (If visible, hides it. If hidden, shows it)&#10;ActionBar bar = getActionBar();&#10;if (bar != null) {&#10;if (bar.isShowing()) {&#10;bar.hide();&#10;}&#10;else {&#10;bar.show();&#10;}&#10;}&#10;" description="Show the action bar if it is hidden, and hide it otherwise." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_menu_Action_bar" value="//Sets the action bar navigation mode&#10;ActionBar actionBar = getActionBar();&#10;actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);&#10;" description="navigation tab mode - Put the action bar in tab mode for navigation" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

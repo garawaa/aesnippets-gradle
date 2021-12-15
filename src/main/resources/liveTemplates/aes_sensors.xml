@@ -1,0 +1,12 @@
+<templateSet group="aes_sensors">
+  <template name="aes_sensors_Detect_a_sensor" value="// This code requires API level 3 (Android 1.5) or higher&#10;SensorManager manager = (SensorManager) getSystemService(SENSOR_SERVICE);&#10;boolean isAccelerometerSupported = true;&#10;if(manager.getSensorList(Sensor.TYPE_ACCELEROMETER).isEmpty()){&#10; isAccelerometerSupported = false;&#10;}&#10;&#10;" description="Determine if your device supports a particular sensor" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_sensors_Read_data_from_a_sensor" value="// This code requires API level 3 (Android 1.5) or higher&#10;SensorManager manager;&#10;manager = (SensorManager) getSystemService(SENSOR_SERVICE);&#10;manager.registerListener(new SensorEventListener(){&#10; public void onAccuracyChanged(Sensor sensor, int accuracy){&#10; }&#10; public void onSensorChanged(SensorEvent event){&#10; if(event.sensor.getType() == Sensor.TYPE_ORIENTATION){&#10; // The contents of the values[] array depends upon the sensor type.&#10; // See the description of the values[] array in the SensorEvent object documentation.&#10; float azimuth = Math.round(event.values[0]);&#10; float pitch = Math.round(event.values[1]);&#10; float roll = Math.round(event.values[2]);&#10;&#10; // Do something with the device orientation values&#10; }&#10; }},&#10;&#10;manager.getDefaultSensor(Sensor.TYPE_ORIENTATION),SensorManager.SENSOR_DELAY_NORMAL);&#10; " description="Read data from an orientation sensor" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

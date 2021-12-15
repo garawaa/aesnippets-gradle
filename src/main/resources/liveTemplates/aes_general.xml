@@ -1,0 +1,32 @@
+<templateSet group="aes_general">
+  <template name="aes_general_Send_SMS" value="// To use these SmsManager methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.SEND_SMS&quot;/&gt;&#10;SmsManager m = SmsManager.getDefault();&#10;String destinationNumber =&quot;0123456789&quot;;&#10;String text = &quot;Hello!&quot;;&#10;m.sendTextMessage(destinationNumber, null, text, null, null);&#10;" description="Construct and send an SMS message" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_general_Display_a_Toast" value="Toast.makeText(this, &quot;Put your message here&quot;, Toast.LENGTH_SHORT).show();&#10;" description="Display a &quot;toast&quot; message to the user" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_general_Status_Bar_Notification" value="int notificationID = 10;&#10;NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);&#10;// Create the notification&#10;Notification notification = new Notification(R.drawable.yourIconId, &quot;Put your notification text here&quot;, System.currentTimeMillis());&#10;// Create the notification's expanded message&#10;// When the user clicks on it, it opens your activity&#10;Intent intent = new Intent(this, YourActivityName.class);&#10;PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);&#10;notification.setLatestEventInfo(this, &quot;Put your title here&quot;, &quot;Put your text here&quot;, pendingIntent);&#10;// Show notification&#10;notificationManager.notify(notificationID, notification);&#10;" description="Display a message in the status bar" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_general_Vibrate_the_phone_for_a_given_time" value="// To use these Vibrator methods, AndroidManifest.xml must have the following permission:&#10;// &lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot;/&gt;&#10;// Vibrate for 1 second&#10;Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);&#10;vibrator.vibrate(1000);&#10;" description="Trigger the vibration hardware for a limited time" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_general_Vibrate_the_phone_following_an_on_off_pattern" value="// To use these Vibrator methods, AndroidManifest.xml must have the following permission:&#10;//&lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot;/&gt;&#10;// Vibrate in a pattern with 0ms off(start immediately), 200ms on, 100ms off, 100ms on, 500ms off, 500ms on,&#10;// repeating the pattern starting from index 4: 100ms on.&#10;// Note that you'll have to call vibrator.cancel() in order to stop the vibrator.&#10;// Change the second parameter to -1 if you want play the pattern only once.&#10;Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);&#10;vibrator.vibrate(new long[] {0, 200, 100, 100, 500, 500}, 4);" description="Trigger the vibration hardware to follow an on/off pattern" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_general_Turn_on_Strict_Mode" value="// Add or remove any policies and penalties strict mode checking.&#10; // This is for application development and testing and should be&#10; // removed before your application reaches the market.&#10; // For more details of what each method does, check&#10; // http://developer.android.com/reference/android/os/StrictMode.ThreadPolicy.Builder.html&#10;StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()&#10; .detectDiskReads()&#10; .detectDiskWrites()&#10; .detectNetwork() // or .detectAll() for all detectable problems&#10; .penaltyDialog()&#10; .penaltyLog()&#10; .build());&#10; StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()&#10; .detectLeakedSqlLiteObjects()&#10; .penaltyLog()&#10; .penaltyDeath()&#10; .build());&#10; // you can also use the penaltyDropBox() as an alternative to displaying a violation occurrence" description="Detect operations executed in the Lil that are not recommended and bring them to the user's attention" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

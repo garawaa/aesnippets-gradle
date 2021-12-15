@@ -1,0 +1,59 @@
+<idea-plugin>
+    <id>com.garawaa.unique.plugin.id</id>
+    <name>AESnippets</name>
+    <vendor email="garawaa@gmail.com" url="http:garawaa.github.io">MyGithub</vendor>
+
+
+    <description><![CDATA[
+    Ready to use android java code snippets.
+    You may be used eclipse ide for android development early. And you may remember android andmore snippets.
+    Now these snippets come to android studio and as well as intellij ide<br>
+    Install this plugin reopen your ide and in your java code type something like aes_... or just click ctrl+j.
+    caution: some codes do not work for latest android versions.
+    <em>android eclipse snippets java code live templates</em>
+    ]]></description>
+    <change-notes>
+        <![CDATA[
+      <ul>
+        <li><b>1.0.0</b> android studio 4.1+ support added.</li>
+      </ul>
+    ]]>
+    </change-notes>
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.java-capable</depends>
+
+
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <defaultLiveTemplates file="/liveTemplates/aes_bluetooth.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_dialogs.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_face_recognition.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_fragment.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_general.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_gps.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_intents.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_localization.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_log.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_media.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_menus_and_actionbar.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_preferences.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_resources_and_assets.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_screen.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_sensors.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_sql_commands.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_sqlite_functions.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_system_services.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_ui.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/aes_web_services.xml"/>
+
+        <liveTemplateContext implementation="com.garawaa.TemplateContext"/>
+
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

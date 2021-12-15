@@ -1,0 +1,12 @@
+<templateSet group="aes_fragment">
+  <template name="aes_fragment_Fragment_Replace_transaction" value="//Replaces a container's fragment(s)&#10;FragmentTransaction ft = getFragmentManager().beginTransaction();&#10;MyFragment newFrag =new MyFragment(); //TODO Change to your fragment constructor&#10;ft.addToBackStack(null); &#10;//Allows this transaction to be undone when the back button is pressed ft.replace(R.id.containerId, newFrag, &quot;newFragTag&quot;); &#10;//TODO Replace 'R.id.containerId' (with the ID of a View) and 'newFragTag'&#10;ft.commit();" description="Replace one fragment by a new one using a animation" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_fragment_Add_Fragment_programmatically" value="//Adds a fragment to a specified layout&#10;FragmentTransaction ft = getFragmentManager().beginTransaction();&#10;MyFragment newFrag =new MyFragment(); &#10;//TODO Change to your fragment constructor ft.addToBackStack(null); &#10;//Allows this transaction to be undone when the back button is pressed&#10;ft.add(R.id.layoutId, newFrag); &#10;//TODO Replace 'R.id.layoutId' (with the ID of a layout)&#10;ft.commit();&#10;" description="Adds one fragment programmatically" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

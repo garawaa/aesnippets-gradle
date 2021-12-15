@@ -1,0 +1,37 @@
+<templateSet group="aes_dialogs">
+  <template name="aes_dialog_Alert_Dialog" value="AlertDialog.Builder builder = new AlertDialog.Builder(this);&#10;builder.setMessage(&quot;Put your question here?&quot;)&#10; .setCancelable(false)&#10; .setPositiveButton(&quot;Yes&quot;, new DialogInterface.OnClickListener() {&#10; public void onClick(DialogInterface dialog, int id) {&#10; // put your code here&#10; }&#10; })&#10; .setNegativeButton(&quot;No&quot;, new DialogInterface.OnClickListener() {&#10; public void onClick(DialogInterface dialog, int id) {&#10; // put your code here&#10; dialog.cancel();&#10; }&#10; });&#10;AlertDialog alertDialog = builder.create();&#10;alertDialog.show();&#10;" description="Display a simple alert dialog with a Yes/No question" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_dialog_Progress_Dialog" value="ProgressDialog dialog = ProgressDialog.show(this, &quot;Your Title&quot;, &quot;Put your message here&quot;, true);&#10;" description="Display a progress dialog" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_dialog_Progress_Bar_Dialog" value="ProgressDialog progressDialog = new ProgressDialog(this);&#10;progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);&#10;progressDialog.setMax(PROGRESS_MAX);&#10;progressDialog.setMessage(&quot;Put your message here&quot;);&#10;progressDialog.setCancelable(false);&#10;progressDialog.incrementProgressBy(PROGRESS_INCREMENT);&#10;" description="Display a progress bar" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_dialog_Date_Picker_Dialog" value="// Define the date picker dialog listener, which will be called after&#10;// the user picks a date in the displayed dialog&#10;DatePickerDialog.OnDateSetListener datePickerDialogListener =&#10; new DatePickerDialog.OnDateSetListener() {&#10; public void onDateSet(DatePicker view, int year,&#10; int monthOfYear, int dayOfMonth) {&#10; // put your code here&#10; // update your model/view with the date selected by the user&#10; }&#10; };&#10;// Get the current date&#10;Calendar calendar = Calendar.getInstance();&#10;int year = calendar.get(Calendar.YEAR);&#10;int month = calendar.get(Calendar.MONTH);&#10;int day = calendar.get(Calendar.DAY_OF_MONTH);&#10;// Create a date picker dialog&#10;DatePickerDialog datePickerDialog = new DatePickerDialog(this, datePickerDialogListener, year, month, day);&#10;// Display the date picker dialog&#10;datePickerDialog.show();&#10;" description="Construct and display a dialog that allows the user to select a date" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_dialog_Time_Picker_Dialog" value="// Define the date picker dialog listener, which will be called after&#10;// the user picks a time in the displayed dialog&#10;TimePickerDialog.OnTimeSetListener timePickerDialogListener =&#10; new TimePickerDialog.OnTimeSetListener() {&#10; public void onTimeSet(TimePicker view, int hourOfDay, int minute) {&#10; // put your code here&#10; // update your model/view with the date selected by the user&#10; }&#10; };&#10;// Get the current time&#10;Calendar c = Calendar.getInstance();&#10;int hour = c.get(Calendar.HOUR_OF_DAY);&#10;int minute = c.get(Calendar.MINUTE);&#10;// Create a time picker dialog&#10;TimePickerDialog timerPickerDialog = new TimePickerDialog(this,&#10;timePickerDialogListener, hour, minute, false);&#10;// Display the time picker dialog&#10;timerPickerDialog.show();&#10;" description="Construct and display a dialog that allows the user to select a time" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_dialog_Custom_Dialog" value="Dialog dialog = new Dialog(this);&#10;dialog.setContentView(R.layout.yourLayoutId);&#10;dialog.show();&#10;" description="Display a dialog with custom content. This dialog must have a title." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_dialog_Custom_Alert_Dialog" value="LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);&#10;View layout = inflater.inflate(R.layout.yourLayoutId, (ViewGroup) findViewById(R.id.yourLayoutRoot));&#10;AlertDialog.Builder builder = new AlertDialog.Builder(this).setView(layout);&#10;AlertDialog alertDialog = builder.create();&#10;alertDialog.show();&#10;" description="Custom Alert Dialog" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

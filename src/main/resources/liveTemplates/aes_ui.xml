@@ -1,0 +1,32 @@
+<templateSet group="aes_ui">
+  <template name="aes_ui_Pixel_density_independent_touch_gestures" value="private static final float DISTANCE_DIP = 16.0f;&#10;private static final float PATH_DIP = 40.0f;&#10;// convert dip measurements to pixels&#10;final float scale = getResources().getDisplayMetrics().density;&#10;int scaledDistance = (int) (DISTANCE_DIP * scale + 0.5f);&#10;int scaledPath = (int) (PATH_DIP * scale + 0.5f);&#10;// For more information about touch gestures and screens support, see:&#10;// http://developer.android.com/resources/articles/gestures.html&#10;// http://developer.android.com/reference/android/gesture/package-summary.html&#10;// http://developer.android.com/guide/practices/screens_support.html&#10;Scale bitmap to view size - Resize a bitmap to the size of a&#10;view. Useful for creating background images.&#10;originalImage = Bitmap.createScaledBitmap(&#10;originalImage, // bitmap to resize&#10;view.getWidth(), // new width&#10;view.getHeight(), // new height &#10;true); // bilinear filtering" description="Make your touch gestures work the same way, independent of the device pixel density." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_ui_Adjust_widget_size" value="public void onSizeChanged(int w, int h, int oldW,&#10;int oldH) {&#10;// Calculate relative sizes at runtime&#10;// mButton and mButtonBackGround are of type Drawable&#10;int selfW = mButton.getIntrinsicWidth();&#10;int selfH = mButton.getIntrinsicHeight();&#10;int marginX = (w - selfW) / 2;&#10;int marginY = (h - selfH) / 2;&#10;mButtonBackground.setBounds(marginX, marginY,&#10;marginX + selfW, marginY + selfH);&#10;mButton.setBounds(marginX, marginY,&#10;marginX + selfW, marginY + selfH);&#10;// Implement the measureText method to resize text data, if applicable&#10;measureText();&#10;}&#10;" description="Adjust the size of a widget (a button, in this example) when the enclosing view changes its size." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_ui_Button_click_event" value="// Add import android.view.View.OnClickListener; statement&#10;// Add import android.widget.Button; statement&#10;// Add import android.view.View; statement&#10;&#10;Button b1 = (Button) findViewById(R.id.your_button_id); // Use this method carefully, it consumes lots of system resources&#10;b1.setOnClickListener(new OnClickListener() {&#10;public void onClick(View v) {&#10;// Handle the button click here as you wish&#10;}&#10;});&#10;" description="Button click event." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_ui_Move_code_out_of_Ul_thread" value="// You must provide types for the three generic parameters before the code will compile.&#10;// For more details, see http://developer.android.com/reference/android/os/AsyncTask.html&#10;private class MoveOutOfUIthread extends AsyncTask&lt;&#10; Params, // one or more values of this type are passed to doInBackground()&#10; Progress, // the type of the progress units published during background crunching.&#10; Result // the type of the result returned by doInBackground()&#10; &gt;&#10;{&#10; protected Integer doInBackground(Params... p1, p2, p3) {&#10; // your background task here&#10; Result result = new Result();&#10; return result;&#10; }&#10;&#10; protected void onPostExecute(Result r) {&#10; // this gets the object returned by doInBackground, and executes on&#10;the UI thread&#10; }&#10;}&#10;new MoveOutOfUIthread().execute(p1, p2, p3);&#10;" description="Use AsyncTaskto perform background operations, thus avoiding Ul freezes and improving application responsiveness. This helps with Honeycomb (Android 3.0), which enforces the rule &quot;don't do network access in the Ul thread&quot; (throws exception)." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_ui_Hide_status_bar" value="//Hides status bar (if it was showing)&#10;View v = findViewById(R.id.view_id); &#10;//for example, the ID representing the root of a linear layout&#10;v.setSystemUiVisibility(View.STATUS_BAR_HIDDEN);" description="lights off mode - Hides status bar" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_ui_Make_status_bar_visible" value="//Shows status bar (if it was hidden)&#10;View v = findViewById(R.id.view_id); &#10;//for example, the ID representing the root of a linear layout&#10;v.setSystemUiVisibility(View.STATUS_BAR_VISIBLE);&#10;" description="Shows status bar (if it was hidden)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

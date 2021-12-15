@@ -1,0 +1,17 @@
+<templateSet group="aes_screen">
+  <template name="aes_screen_Make_an_activity_full_screen" value="getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);&#10;" description="Expand the current activity so it fits the device's screen" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_screen_Get_the_screen_size" value="Display display = ((WindowManager)&#10;getSystemService(WINDOW_SERVICE)).getDefaultDisplay();&#10;int width = display.getWidth();&#10;int height = display.getHeight();&#10;" description="Retrieve the size of the device's screen" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_screen_Get_the_screen_orientation" value="Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();&#10;int orientation = display.getOrientation();&#10;" description="Retrieve the current screen orientation" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>

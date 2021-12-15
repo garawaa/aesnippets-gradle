@@ -1,0 +1,22 @@
+<templateSet group="aes_preferences">
+  <template name="aes_preferences_Retrieve_shared_preference_named_preferences_file" value="// Use MODE_WORLD_READABLE and/or MODE_WORLD_WRITEABLE to grant access to other applications&#10;SharedPreferences preferences = getSharedPreferences(&quot;YourPreferencesName&quot;, MODE_PRIVATE);&#10;String preferenceValue = preferences.getString(&quot;yourPreferenceKey&quot;, &quot;defaultValue&quot;);&#10;recorder.stop();&#10;recorder.release();&#10;&#10;" description="Retrieve shared preference - named preferences file" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_preferences_Retrieve_shared_preference_single_preference_file" value="// Use MODE_WORLD_READABLE and/or MODE_WORLD_WRITEABLE to grant access to other applications&#10;SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());&#10;String preferenceValue = preferences.getString(&quot;yourPreferenceKey&quot;, &quot;defaultValue&quot;);&#10;&#10;" description="Retrieve a shared preference from Preference Manager" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_preferences_Write_shared_preference_named_preferences_file" value="// Use MODE_WORLD_READABLE and/or MODE_WORLD_WRITEABLE to grant access to other&#10;applications&#10;SharedPreferences preferences = getSharedPreferences(&quot;YourPreferencesName&quot;, MODE_PRIVATE);&#10;SharedPreferences.Editor editor = preferences.edit();&#10;editor.putString(&quot;yourPreferenceKey&quot;, &quot;Your Preference Value&quot;);&#10;editor.commit();&#10;" description="Write a preference value to a named preferences file." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+  <template name="aes_preferences_Write_shared_preference_single_preference_file" value="// Use MODE_WORLD_READABLE and/or MODE_WORLD_WRITEABLE to grant access to other applications&#10;SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());&#10;SharedPreferences.Editor editor = preferences.edit();&#10;editor.putString(&quot;yourPreferenceKey&quot;, &quot;Your Preference Value&quot;);&#10;editor.commit();&#10;" description="Write a preference value in the one preferences file used by your Activity." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA" value="true" />
+    </context>
+  </template>
+</templateSet>
