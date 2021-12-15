@@ -6,5 +6,7 @@ Intellij IDE community edition 2021.1.3
 
 JDK 11
 
+Gradle 6.8
+
 ## Marketplace link
 https://plugins.jetbrains.com/plugin/15987-aesnippets
